@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Saree | Regal Repeats</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fefefe;
+      color: #2f2f2f;
+      line-height: 1.8;
+    }
+
+    header {
+      background: linear-gradient(90deg, #a0522d, #d2b48c);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, select, textarea {
+      padding: 0.75rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: linear-gradient(90deg, #a0522d, #d2b48c);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 0.4rem 0.8rem;
+      cursor: pointer;
+      font-size: 0.8rem;
+      width: fit-content;
+      align-self: center;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #8b4513, #cdaa7d);
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    ul li {
+      margin-bottom: 1rem;
+    }
+
+    ul a {
+      color: #a0522d;
+      text-decoration: none;
+    }
+
+    ul a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Book a Saree</h1>
+  </header>
+
+  <section>
+    <form action="https://formspree.io/f/xayrlwla" method="POST" onsubmit="document.getElementById('success-message').style.display='block';">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Phone Number" required>
+      <select name="saree_type" required>
+        <option value="">Select Saree Type</option>
+        <option value="Paithani Silk">Paithani Silk</option>
+        <option value="Patola Weave">Patola Weave</option>
+        <option value="Kanchi Silk">Kanchi Silk</option>
+        <option value="Kota Cotton">Kota Cotton</option>
+        <option value="Partywear">Partywear</option>
+      </select>
+      <label>Rental Date:</label>
+      <input type="date" name="rental_date">
+      <textarea name="message" rows="4" placeholder="Any specific requirements or questions?"></textarea>
+      <label><input type="checkbox" required> I agree to the <a href="#policies">rental policies</a>.</label>
+      <button type="submit">Submit Inquiry</button>
+    </form>
+    <p id="success-message" style="display:none; color: green; text-align: center; margin-top: 1rem;">Thank you! Your inquiry has been submitted.</p>
+  </section>
+
+  <section id="policies">
+    <h2 style="text-align: center">Rental Policies</h2>
+    <ul>
+      <li><a href="Regal_Repeats_Saree_Rental_Agreement.docx" target="_blank">Saree Rental Agreement</a></li>
+      <li><a href="Regal_Repeats_Return_Exchange_Policy.docx" target="_blank">Return & Exchange Policy</a></li>
+      <li><a href="Regal_Repeats_Security_Deposit_Policy.docx" target="_blank">Security Deposit Policy</a></li>
+    </ul>
+  </section>
+</body>
+</html>
